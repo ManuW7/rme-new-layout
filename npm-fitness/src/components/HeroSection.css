@@ -1,0 +1,62 @@
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding-left: 72px;
+  padding-top: 113px;
+  padding-bottom: 113px;
+}
+
+.heroSectionContent {
+  max-width: 415px;
+}
+
+.heroSection h1 {
+  font-size: 75px;
+  color: #3d4342;
+}
+
+.heroSection h1 span {
+  color: #4dc0b3;
+}
+
+.heroSection p {
+  font-size: 22px;
+  color: #3d4342;
+  margin-top: 22px;
+}
+
+.heroSection .tryButton {
+  background-color: #4dc0b3;
+  padding: 16px 30px;
+  color: white;
+  margin-top: 53px;
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.greenCircleBackground {
+  width: 846px;
+  height: 846px;
+  background-color: #4dc0b3;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 600px;
+}
+
+.heroSection .manPicture {
+  position: absolute;
+  max-width: 575px;
+  top: 0;
+  left: 785px;
+}
+
+.heroSection .phonePicture {
+  position: absolute;
+  max-width: 350px;
+  top: 175px;
+  left: 525px;
+}

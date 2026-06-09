@@ -34,7 +34,7 @@ header a.downloadButton {
   text-decoration: none;
   color: black;
   padding: 12px 25px;
-  border-radius: 12px;
+  border-radius: 15px;
   background-color: white;
   cursor: pointer;
   font-family: "Inter";
