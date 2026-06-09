@@ -1,0 +1,58 @@
+header {
+  background-color: #f8f8f8;
+  padding: 32px 72px;
+}
+
+header .headerContentWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 55px;
+  font-size: 16px;
+}
+
+header ul a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Inter";
+}
+
+header ul a:active,
+header ul a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+header a.downloadButton {
+  text-decoration: none;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Inter";
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+header a.downloadButton:active {
+  text-decoration: none;
+  color: black;
+}
+
+header a.downloadButton p {
+  margin-right: 10px;
+}
+
+header a.downloadButton .logosDiv {
+  display: flex;
+  gap: 6px;
+}
