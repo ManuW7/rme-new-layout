@@ -5,6 +5,7 @@ import FriendsBanner from "./components/FriendsBanner";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import HowThisWorks from "./components/HowThisWorks";
+import QuestionsLeft from "./components/QuestionsLeft";
 import ThreeDayBanner from "./components/ThreeDayBanner";
 import TrainerSection from "./components/TrainerSection";
 import WhoSection from "./components/WhoSection";
@@ -22,6 +23,7 @@ function App() {
         <ThreeDayBanner></ThreeDayBanner>
         <FriendsBanner></FriendsBanner>
         <FAQSection></FAQSection>
+        <QuestionsLeft></QuestionsLeft>
       </main>
     </>
   );

@@ -1,0 +1,41 @@
+.questionsLeft {
+  display: flex;
+  flex-direction: row;
+  max-height: 335px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 200px;
+}
+
+.questionsLeft img {
+  max-height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  max-width: 50%;
+  border-radius: 20px 0 0 20px;
+}
+
+.questionsLeft .textContent {
+  padding: 60px 100px;
+}
+
+.questionsLeft .textContent h3 {
+  font-size: 50px;
+  color: #4dc0b3;
+}
+
+.questionsLeft .textContent .annot {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #3d4342;
+}
+
+.questionsLeft .textContent a {
+  background-color: #4dc0b3;
+  padding: 16px 31px;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 40px;
+}
