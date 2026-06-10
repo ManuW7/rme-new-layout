@@ -1,0 +1,58 @@
+.whoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 169px;
+}
+
+.whoSection .annotation {
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: #3d4342;
+}
+
+.whoCard {
+  display: flex;
+  flex-direction: row;
+  max-width: 650px;
+  max-height: 252px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.whoCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.whoCard img {
+  max-width: 272px;
+  object-fit: cover;
+  max-height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+
+.whoCardContent {
+  padding: 49px 30px;
+}
+
+.whoCardContent .countDiv {
+  background-color: #4dc0b3;
+  display: inline-block;
+  color: white;
+  padding: 9px 10px;
+  border-radius: 10px;
+  margin-bottom: 13px;
+}
+
+.whoCardContent h5 {
+  font-size: 33px;
+  color: #4dc0b3;
+  margin-bottom: 8px;
+}
+
+.whoCardContent .whoText {
+  font-size: 16px;
+  color: #3d4342;
+}

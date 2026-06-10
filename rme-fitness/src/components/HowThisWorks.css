@@ -1,0 +1,43 @@
+.howThisWorks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.howThisWorks h2 {
+  margin-top: 200px;
+  margin-bottom: 40px;
+}
+
+.howCardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.howCard {
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.howCard img {
+  max-width: 106px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.howCard p {
+  font-size: 18px;
+  color: #3d4342;
+}
+
+.howCard p span {
+  font-size: 18px;
+  color: #0c9586;
+}

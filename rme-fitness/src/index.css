@@ -6,6 +6,7 @@
 
 main {
   padding: 0 72px;
+  background-color: #f8f8f8;
 }
 
 @font-face {
@@ -30,6 +31,11 @@ h4,
 h5,
 h6 {
   font-family: "Bebas Neue";
+}
+
+h2 {
+  font-size: 55px;
+  color: #4dc0b3;
 }
 
 p {

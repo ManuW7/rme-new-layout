@@ -60,3 +60,10 @@
   top: 175px;
   left: 525px;
 }
+
+.heroSection .womanPicture {
+  position: absolute;
+  max-width: 445px;
+  top: 150px;
+  left: 680px;
+}
