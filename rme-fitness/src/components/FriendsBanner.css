@@ -1,0 +1,41 @@
+.friendsBanner {
+  display: flex;
+  flex-direction: row;
+  margin-top: 200px;
+}
+
+.friendsBanner img {
+  width: 50%;
+  max-height: 422px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.friendsBanner .textContent {
+  padding: 60px 80px;
+}
+
+.friendsBanner .textContent h3 {
+  font-size: 50px;
+  color: #4dc0b3;
+}
+
+.friendsBanner .textContent .annot {
+  font-size: 16px;
+  margin-top: 12px;
+  max-width: 345px;
+}
+
+.friendsBanner .textContent span {
+  color: #4dc0b3;
+}
+
+.friendsBanner .textContent a {
+  background-color: #4dc0b3;
+  padding: 16px;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 50px;
+}

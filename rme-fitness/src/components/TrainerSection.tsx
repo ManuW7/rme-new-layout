@@ -5,7 +5,7 @@ import phoneTrainer from "../assets/phone_trainer.png";
 function TrainerSection() {
   return (
     <section className="trainerSection">
-      <h2>КАК РАБОАТЕТ ИИ-ТРЕНЕР</h2>
+      <h2>КАК РАБОТАЕТ ИИ-ТРЕНЕР</h2>
       <div className="contentWrapper">
         <div className="picturesDiv">
           <div className="grayCircle"></div>

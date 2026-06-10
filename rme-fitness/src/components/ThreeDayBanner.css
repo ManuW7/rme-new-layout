@@ -1,0 +1,84 @@
+.subscriptionBanner .textContent h3 {
+  max-width: 380px;
+  font-size: 60px;
+  z-index: 1;
+  position: relative;
+  color: white;
+}
+
+.subscriptionBanner .textContent p {
+  max-width: 320px;
+  font-size: 16px;
+  margin-top: 26px;
+  z-index: 1;
+  position: relative;
+  color: white;
+}
+
+.subscriptionBanner {
+  padding: 85px 60px;
+  margin-top: 200px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.subscriptionBanner .bannerContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.greenCircle {
+  width: 950px;
+  height: 950px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #4dc0b3;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25%;
+}
+
+.subscriptionBanner .backGym {
+  max-height: 724px;
+  position: absolute;
+  top: 0;
+  left: 53%;
+}
+
+.subscriptionBanner .phoneImage {
+  position: absolute;
+  max-width: 200px;
+  top: 10%;
+  left: 75%;
+}
+
+.subscriptionBanner .buttonsDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 45%;
+  top: 25%;
+  gap: 12px;
+}
+
+.subscriptionBanner .buttonsDiv a {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscriptionBanner .buttonsDiv a.googleButton {
+  padding: 19px 23px;
+}
+
+.subscriptionBanner .buttonsDiv a.ruStoreButton {
+  padding: 20px 39px;
+}
+
+.subscriptionBanner .buttonsDiv a.appleButton {
+  padding: 23px 44px;
+}

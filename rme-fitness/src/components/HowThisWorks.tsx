@@ -6,7 +6,7 @@ import howCardImg3 from "../assets/howCard_img3.png";
 function HowThisWorks() {
   return (
     <section className="howThisWorks">
-      <h2>КАК ЭТО РАБОАТЕТ?</h2>
+      <h2>КАК ЭТО РАБОТАЕТ?</h2>
       <div className="howCardsContainer">
         <div className="howCard">
           <img src={howCardImg1} alt="" />
