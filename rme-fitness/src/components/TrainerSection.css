@@ -1,0 +1,74 @@
+.trainerSection h2 {
+  text-align: center;
+  font-size: 55px;
+}
+
+.trainerSection {
+  margin-top: 200px;
+}
+
+.trainerSection .contentWrapper {
+  margin-top: 41px;
+  display: flex;
+  flex-direction: row;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picturesDiv,
+.textDiv {
+  border-radius: 13px;
+}
+
+.trainerSection .picturesDiv {
+  background-color: #4dc0b3;
+  height: inherit;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.picturesDiv .grayCircle {
+  width: 611px;
+  height: 611px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.trainerSection .textDiv {
+  width: 50%;
+  background-color: white;
+  padding: 75px 55px;
+}
+
+.trainerSection .phonePicture {
+  max-width: 230px;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 70px;
+}
+
+.trainerSection .trainerPicture {
+  max-width: 180px;
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  left: 200px;
+}
+
+.trainerSection .textDiv h3 {
+  color: #4dc0b3;
+  font-size: 33px;
+  margin-bottom: 9px;
+}
+.trainerSection .textDiv p {
+  font-size: 16px;
+  color: #3d4342;
+  max-width: 365px;
+}
