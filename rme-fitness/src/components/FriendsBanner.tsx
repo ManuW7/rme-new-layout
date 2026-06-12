@@ -3,7 +3,7 @@ import stonksPic from "../assets/stonks.png";
 
 function FriendsBanner() {
   return (
-    <section className="friendsBanner">
+    <section className="friendsBanner" id="friendsBanner">
       <img src={stonksPic} alt="" />
       <div className="textContent">
         <h3>согласны, ДРУЗЕЙ НА&nbsp;СКИДКУ НЕ&nbsp;МЕНЯЮТ...</h3>
@@ -12,9 +12,9 @@ function FriendsBanner() {
           подписку, ты&nbsp;получишь скидку <span>до&nbsp;100%</span>{" "}
           на&nbsp;оплату своего ии-тренера
         </p>
-        <a href="">
+        <button>
           <p>Подробнее про рефералку</p>
-        </a>
+        </button>
       </div>
     </section>
   );

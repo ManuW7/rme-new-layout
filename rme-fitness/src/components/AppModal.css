@@ -1,0 +1,160 @@
+.appModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.appModal {
+  position: relative;
+  width: min(100%, 400px);
+  min-height: 320px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+}
+
+.appModalClose {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  color: #3d4342;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.appModalClose:hover {
+  background-color: #4dc0b3;
+  color: white;
+}
+
+.appModal .dogPicture {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  object-position: top center;
+}
+
+.appModal .textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.appModal h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.appModal p {
+  font-size: 12px;
+  text-align: center;
+  color: #3d4342;
+  margin-top: 10px;
+}
+
+.appModal form {
+  width: 100%;
+}
+
+.phoneInput {
+  width: 100%;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 7px 8px;
+  border-radius: 12px;
+  border: 1px solid #8f9098;
+
+  font-family: "Manrope";
+}
+
+.phoneInput::placeholder {
+  color: #8f9098;
+}
+
+.radioButtons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.radioButtons input {
+  appearance: none;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 1.5px solid #c7ccd3;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.radioButtons input:checked {
+  border-color: #4dc0b3;
+  background-image: radial-gradient(circle, #4dc0b3 0 7px, transparent 8px);
+}
+
+.radioButtons input:focus-visible {
+  outline: 2px solid rgba(77, 192, 179, 0.35);
+  outline-offset: 2px;
+}
+
+.radioButtons label {
+  font-family: "Manrope";
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8f9098;
+  cursor: pointer;
+}
+
+.formWarning {
+  color: #d84a4a;
+  margin-top: 10px;
+}
+
+.submitButton {
+  display: block;
+  margin: 20px auto 0;
+  background-color: #4dc0b3;
+  color: white;
+  border: 3px solid transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: white;
+  color: #4dc0b3;
+  border: 3px solid #4dc0b3;
+
+  box-shadow: 0 0 2px 2px #4dc0b3;
+}
+
+@media (max-width: 520px) {
+  .appModal {
+    min-height: 260px;
+  }
+
+  .appModalClose {
+    top: -48px;
+    right: 0;
+  }
+}

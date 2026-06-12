@@ -3,7 +3,7 @@ import dogPic from "../assets/dog.png";
 
 function QuestionsLeft() {
   return (
-    <section className="questionsLeft">
+    <section className="questionsLeft" id="questionsLeft">
       <img src={dogPic} alt="" />
       <div className="textContent">
         <h3>ОСТАЛИСЬ ВОПРОСЫ?</h3>
@@ -11,9 +11,9 @@ function QuestionsLeft() {
           Напишите нашему дружелюбному менеджеру: не&nbsp;бойтесь,
           он&nbsp;у&nbsp;нас не кусается. Он&nbsp;вообще славный малый
         </p>
-        <a href="">
+        <button>
           <p>Написать!</p>
-        </a>
+        </button>
       </div>
     </section>
   );

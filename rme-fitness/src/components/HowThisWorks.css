@@ -5,39 +5,62 @@
 }
 
 .howThisWorks h2 {
-  margin-top: 200px;
+  margin-top: clamp(96px, 14vw, 200px);
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .howCardsContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 28px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2.5vw, 28px);
 }
 
 .howCard {
-  max-width: 360px;
+  width: 100%;
+  min-width: 0;
   display: flex;
   align-items: center;
   background-color: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: clamp(16px, 2vw, 20px);
 }
 
 .howCard img {
-  max-width: 106px;
+  width: clamp(82px, 9vw, 106px);
+  flex-shrink: 0;
   object-fit: cover;
   aspect-ratio: 1/1;
   border-radius: 20px;
-  margin-right: 20px;
+  margin-right: clamp(14px, 2vw, 20px);
 }
 
 .howCard p {
-  font-size: 18px;
+  min-width: 0;
+  font-size: clamp(15px, 1.7vw, 18px);
+  line-height: 1.35;
   color: #3d4342;
 }
 
 .howCard p span {
-  font-size: 18px;
+  font-size: inherit;
   color: #0c9586;
+}
+
+@media (max-width: 960px) {
+  .howCardsContainer {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 520px) {
+  .howCard {
+    align-items: flex-start;
+  }
+
+  .howCard img {
+    border-radius: 14px;
+  }
 }

@@ -1,3 +1,4 @@
+import type { MouseEvent } from "react";
 import "./ThreeDayBanner.css";
 
 import bannerBg from "../assets/bannerBg.png";
@@ -7,20 +8,29 @@ import googlePlayIcon from "../assets/googlePlay.svg";
 import ruStoreIcon from "../assets/ruStore.svg";
 import appStoreIcon from "../assets/appStore.svg";
 
-function ThreeDayBanner() {
+interface ThreeDayBannerProps {
+  onOpenAppModal: () => void;
+}
+
+function ThreeDayBanner({ onOpenAppModal }: ThreeDayBannerProps) {
+  const handleStoreClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    onOpenAppModal();
+  };
+
   return (
     <section className="subscriptionBanner">
       <img className="backGym" src={bannerBg} alt="" />
       <div className="greenCircle"></div>
       <img className="phoneImage" src={phoneImage} alt="" />
       <div className="buttonsDiv">
-        <a className="googleButton" href="">
+        <a className="googleButton" href="" onClick={handleStoreClick}>
           <img src={googlePlayIcon} alt="" />
         </a>
-        <a className="ruStoreButton" href="">
+        <a className="ruStoreButton" href="" onClick={handleStoreClick}>
           <img src={ruStoreIcon} alt="" />
         </a>
-        <a className="appleButton" href="">
+        <a className="appleButton" href="" onClick={handleStoreClick}>
           <img src={appStoreIcon} alt="" />
         </a>
       </div>

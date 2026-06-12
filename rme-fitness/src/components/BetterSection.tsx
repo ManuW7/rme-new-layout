@@ -52,7 +52,7 @@ export default function BetterSection() {
   }, []);
 
   return (
-    <section className="betterSection">
+    <section className="betterSection" id="betterSection">
       <h2>ЭТО КРУЧЕ ОБЫЧНЫХ ТРЕНИРОВОК</h2>
 
       <div ref={containerRef} className="betterCardsContainer">

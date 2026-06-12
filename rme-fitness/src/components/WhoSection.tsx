@@ -6,7 +6,7 @@ import whoPic4 from "../assets/who4.png";
 
 function WhoSection() {
   return (
-    <section className="whoSection">
+    <section className="whoSection" id="whoSection">
       <h2>КОМУ ПОДОЙДЁТ ИИ-ТРЕНЕР?</h2>
       <p className="annotation">Найди себя или собери спортивное бинго</p>
 

@@ -1,10 +1,10 @@
 .faq-item {
-  padding: 20px 24px;
+  padding: clamp(16px, 2vw, 20px) clamp(16px, 2vw, 24px);
   border-radius: 16px;
   background: #fff;
   border: 1px solid #e8e8e8;
   margin-bottom: 12px;
-  font-size: 18px;
+  font-size: clamp(15px, 1.5vw, 18px);
 }
 
 .faq-header {
@@ -24,7 +24,8 @@
 }
 
 .faq-question {
-  font-size: 15px;
+  min-width: 0;
+  font-size: clamp(14px, 1.4vw, 15px);
   font-weight: 500;
   color: #1a1a1a;
   line-height: 1.4;
@@ -40,7 +41,9 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .faq-chevron--up {
@@ -48,11 +51,25 @@
   background-color: #b1e3de;
 }
 
+.faq-content-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.faq-item--open .faq-content-wrapper {
+  opacity: 1;
+}
+
 .faq-content {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: clamp(13px, 1.3vw, 14px);
   color: #3d4342;
   max-width: 900px;
+  line-height: 1.6;
 }
 
 .faq-accent {

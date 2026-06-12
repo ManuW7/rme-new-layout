@@ -1,23 +1,26 @@
 .subscriptionBanner .textContent h3 {
-  max-width: 380px;
-  font-size: 60px;
+  max-width: min(44vw, 380px);
+  font-size: clamp(38px, 5.5vw, 60px);
+  line-height: 0.95;
   z-index: 1;
   position: relative;
   color: white;
 }
 
 .subscriptionBanner .textContent p {
-  max-width: 320px;
-  font-size: 16px;
-  margin-top: 26px;
+  max-width: min(42vw, 320px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.4;
+  margin-top: clamp(18px, 2vw, 26px);
   z-index: 1;
   position: relative;
   color: white;
 }
 
 .subscriptionBanner {
-  padding: 85px 60px;
-  margin-top: 200px;
+  min-height: clamp(440px, 48vw, 560px);
+  padding: clamp(52px, 7vw, 85px) clamp(24px, 5vw, 60px);
+  margin-top: clamp(96px, 14vw, 200px);
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -29,38 +32,41 @@
 }
 
 .greenCircle {
-  width: 950px;
-  height: 950px;
+  width: clamp(620px, 68vw, 950px);
+  height: clamp(620px, 68vw, 950px);
   border-radius: 50%;
   position: absolute;
   background-color: #4dc0b3;
   z-index: 0;
   top: 50%;
   transform: translateY(-50%);
-  left: -25%;
+  left: -28%;
 }
 
 .subscriptionBanner .backGym {
+  height: 100%;
   max-height: 724px;
   position: absolute;
   top: 0;
   left: 53%;
+  object-fit: cover;
 }
 
 .subscriptionBanner .phoneImage {
   position: absolute;
-  max-width: 200px;
+  width: clamp(150px, 16vw, 200px);
   top: 10%;
-  left: 75%;
+  left: min(75%, calc(100% - 220px));
 }
 
 .subscriptionBanner .buttonsDiv {
   position: absolute;
   display: flex;
   flex-direction: column;
-  left: 45%;
+  left: min(45%, calc(100% - 420px));
   top: 25%;
   gap: 12px;
+  z-index: 2;
 }
 
 .subscriptionBanner .buttonsDiv a {
@@ -81,4 +87,77 @@
 
 .subscriptionBanner .buttonsDiv a.appleButton {
   padding: 23px 44px;
+}
+
+@media (max-width: 920px) {
+  .subscriptionBanner .textContent h3,
+  .subscriptionBanner .textContent p {
+    max-width: 390px;
+  }
+
+  .subscriptionBanner .buttonsDiv {
+    left: auto;
+    right: 24px;
+    top: auto;
+    bottom: 32px;
+  }
+
+  .subscriptionBanner .phoneImage {
+    left: auto;
+    right: 150px;
+    top: 28%;
+  }
+
+  .subscriptionBanner .backGym {
+    left: 48%;
+  }
+}
+
+@media (max-width: 680px) {
+  .subscriptionBanner {
+    min-height: 640px;
+  }
+
+  .greenCircle {
+    left: -62%;
+  }
+
+  .subscriptionBanner .buttonsDiv {
+    left: 24px;
+    right: auto;
+    bottom: 28px;
+  }
+
+  .subscriptionBanner .buttonsDiv a {
+    width: 168px;
+  }
+
+  .subscriptionBanner .buttonsDiv a.googleButton,
+  .subscriptionBanner .buttonsDiv a.ruStoreButton,
+  .subscriptionBanner .buttonsDiv a.appleButton {
+    padding: 14px 20px;
+  }
+
+  .subscriptionBanner .phoneImage {
+    width: 150px;
+    right: 18px;
+    top: auto;
+    bottom: 52px;
+  }
+
+  .subscriptionBanner .backGym {
+    left: 38%;
+    opacity: 0.72;
+  }
+}
+
+@media (max-width: 440px) {
+  .subscriptionBanner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .subscriptionBanner .phoneImage {
+    width: 128px;
+  }
 }

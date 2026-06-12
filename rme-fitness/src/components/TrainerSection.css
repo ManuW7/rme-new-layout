@@ -1,17 +1,18 @@
 .trainerSection h2 {
+  font-size: clamp(36px, 5vw, 55px);
   text-align: center;
-  font-size: 55px;
 }
 
 .trainerSection {
-  margin-top: 200px;
+  margin-top: clamp(96px, 14vw, 200px);
 }
 
 .trainerSection .contentWrapper {
   margin-top: 41px;
   display: flex;
   flex-direction: row;
-  max-width: 940px;
+  width: min(100%, 940px);
+  min-height: 520px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -23,15 +24,14 @@
 
 .trainerSection .picturesDiv {
   background-color: #4dc0b3;
-  height: inherit;
   width: 50%;
   position: relative;
   overflow: hidden;
 }
 
 .picturesDiv .grayCircle {
-  width: 611px;
-  height: 611px;
+  width: clamp(420px, 48vw, 611px);
+  height: clamp(420px, 48vw, 611px);
   position: absolute;
   top: 60%;
   left: 50%;
@@ -43,32 +43,101 @@
 .trainerSection .textDiv {
   width: 50%;
   background-color: white;
-  padding: 75px 55px;
+  padding: clamp(42px, 6vw, 75px) clamp(28px, 4vw, 55px);
 }
 
 .trainerSection .phonePicture {
-  max-width: 230px;
+  width: clamp(180px, 22vw, 230px);
   position: absolute;
   z-index: 1;
   top: 50px;
-  left: 70px;
+  left: clamp(26px, 7vw, 70px);
 }
 
 .trainerSection .trainerPicture {
-  max-width: 180px;
+  width: clamp(145px, 17vw, 180px);
   position: absolute;
   z-index: 2;
   top: 30px;
-  left: 200px;
+  left: clamp(150px, 20vw, 200px);
 }
 
 .trainerSection .textDiv h3 {
   color: #4dc0b3;
-  font-size: 33px;
+  font-size: clamp(28px, 3vw, 33px);
+  line-height: 1;
   margin-bottom: 9px;
 }
 .trainerSection .textDiv p {
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.45;
   color: #3d4342;
-  max-width: 365px;
+}
+
+.subscribeButton {
+  font-size: clamp(15px, 1.8vw, 18px);
+  background-color: #4dc0b3;
+  padding: 16px clamp(24px, 5vw, 50px);
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: clamp(96px, 14vw, 200px);
+  border-radius: 12px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  font-family: "Helvetica Neue";
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 840px) {
+  .trainerSection .contentWrapper {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .trainerSection .picturesDiv,
+  .trainerSection .textDiv {
+    width: 100%;
+  }
+
+  .trainerSection .picturesDiv {
+    min-height: 430px;
+  }
+
+  .trainerSection .phonePicture {
+    left: calc(50% - 150px);
+  }
+
+  .trainerSection .trainerPicture {
+    left: calc(50% + 8px);
+  }
+}
+
+@media (max-width: 520px) {
+  .trainerSection .picturesDiv {
+    min-height: 360px;
+  }
+
+  .trainerSection .phonePicture {
+    width: 170px;
+    left: calc(50% - 135px);
+  }
+
+  .trainerSection .trainerPicture {
+    width: 135px;
+    left: calc(50% + 0px);
+  }
+
+  .subscribeButton {
+    width: 100%;
+  }
+}
+
+.subscribeButton:hover {
+  background-color: white;
+  color: #4dc0b3;
+  border: 3px solid #4dc0b3;
+  transform: translateY(-5px);
+  box-shadow: 0 0 2px 2px #4dc0b3;
 }

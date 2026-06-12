@@ -4,6 +4,7 @@
   padding-left: 72px;
   padding-top: 113px;
   padding-bottom: 113px;
+  background-color: white;
 }
 
 .heroSectionContent {
@@ -32,9 +33,18 @@
   margin-top: 53px;
   font-family: "Helvetica Neue";
   font-size: 18px;
-  text-decoration: none;
   border-radius: 15px;
-  display: inline-block;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.heroSection .tryButton:hover {
+  background-color: white;
+  color: #4dc0b3;
+  border: 3px solid #4dc0b3;
+  transform: translateY(-5px);
+  box-shadow: 0 0 2px 2px #4dc0b3;
 }
 
 .greenCircleBackground {

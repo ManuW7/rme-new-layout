@@ -3,7 +3,11 @@ import manHero from "../assets/manHero.png";
 import phoneHero from "../assets/phone_hero.png";
 import womanHero from "../assets/womanHero.png";
 
-function HeroSection() {
+interface HeroSectionProps {
+  onOpenAppModal: () => void;
+}
+
+function HeroSection({ onOpenAppModal }: HeroSectionProps) {
   return (
     <section className="heroSection">
       <div className="heroSectionContent">
@@ -14,9 +18,9 @@ function HeroSection() {
           Занимайся фитнесом и&nbsp;йогой из&nbsp;любой точки мира
           и&nbsp;в&nbsp;любое время
         </p>
-        <a className="tryButton" href="">
+        <button className="tryButton" type="button" onClick={onOpenAppModal}>
           Попробовать бесплатно
-        </a>
+        </button>
       </div>
       <div className="greenCircleBackground"></div>
       <img className="manPicture" src={manHero} alt="" />

@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 169px;
+  margin-top: clamp(96px, 13vw, 169px);
 }
 
 .whoSection .annotation {
-  font-size: 22px;
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.35;
+  text-align: center;
   margin-bottom: 40px;
   color: #3d4342;
 }
@@ -14,27 +16,29 @@
 .whoCard {
   display: flex;
   flex-direction: row;
-  max-width: 650px;
-  max-height: 252px;
+  width: min(100%, 650px);
   background-color: white;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .whoCardsContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  align-items: center;
+  gap: clamp(20px, 3vw, 36px);
 }
 
 .whoCard img {
-  max-width: 272px;
+  width: 42%;
+  min-width: 220px;
   object-fit: cover;
-  max-height: 100%;
-  border-radius: 20px 0 0 20px;
 }
 
 .whoCardContent {
-  padding: 49px 30px;
+  min-width: 0;
+  padding: clamp(26px, 4vw, 49px) clamp(20px, 3vw, 30px);
 }
 
 .whoCardContent .countDiv {
@@ -47,12 +51,26 @@
 }
 
 .whoCardContent h5 {
-  font-size: 33px;
+  font-size: clamp(27px, 3vw, 33px);
+  line-height: 1;
   color: #4dc0b3;
   margin-bottom: 8px;
 }
 
 .whoCardContent .whoText {
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.35;
   color: #3d4342;
+}
+
+@media (max-width: 640px) {
+  .whoCard {
+    flex-direction: column;
+  }
+
+  .whoCard img {
+    width: 100%;
+    min-width: 0;
+    max-height: 260px;
+  }
 }

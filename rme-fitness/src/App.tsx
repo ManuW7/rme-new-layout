@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./App.css";
+import AppModal from "./components/AppModal";
 import BetterSection from "./components/BetterSection";
 import FAQSection from "./components/FAQSection";
+import Footer from "./components/Footer";
 import FriendsBanner from "./components/FriendsBanner";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -11,20 +14,28 @@ import TrainerSection from "./components/TrainerSection";
 import WhoSection from "./components/WhoSection";
 
 function App() {
+  const [isAppModalOpen, setIsAppModalOpen] = useState(false);
+
+  const openAppModal = () => setIsAppModalOpen(true);
+  const closeAppModal = () => setIsAppModalOpen(false);
+
   return (
     <>
-      <Header></Header>
-      <HeroSection></HeroSection>
+      <Header onOpenAppModal={openAppModal}></Header>
+      <HeroSection onOpenAppModal={openAppModal}></HeroSection>
       <main>
         <HowThisWorks></HowThisWorks>
         <BetterSection></BetterSection>
         <WhoSection></WhoSection>
-        <TrainerSection></TrainerSection>
-        <ThreeDayBanner></ThreeDayBanner>
+        <TrainerSection onOpenAppModal={openAppModal}></TrainerSection>
+        <ThreeDayBanner onOpenAppModal={openAppModal}></ThreeDayBanner>
         <FriendsBanner></FriendsBanner>
         <FAQSection></FAQSection>
         <QuestionsLeft></QuestionsLeft>
       </main>
+      <Footer onOpenAppModal={openAppModal}></Footer>
+
+      {isAppModalOpen && <AppModal onClose={closeAppModal}></AppModal>}
     </>
   );
 }

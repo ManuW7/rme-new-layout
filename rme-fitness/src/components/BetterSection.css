@@ -1,5 +1,5 @@
 .betterSection {
-  margin-top: 200px;
+  margin-top: clamp(96px, 14vw, 200px);
 }
 
 .betterSection h2 {
@@ -11,10 +11,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 25px;
+  gap: clamp(16px, 2vw, 25px);
 
   overflow-x: auto;
   overflow-y: hidden;
+  padding-bottom: 4px;
 
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -28,8 +29,8 @@
 
 .betterCard {
   background-color: white;
-  max-width: 320px;
-  padding: 18px 20px;
+  width: clamp(260px, 27vw, 320px);
+  padding: clamp(16px, 2vw, 20px);
   border-radius: 20px;
   flex-shrink: 0;
 }
@@ -47,23 +48,30 @@
 }
 
 .betterCard .countDiv {
-  padding: 9px 21px;
+  padding: 9px clamp(16px, 2vw, 21px);
   background-color: #4dc0b3;
   display: inline-block;
   border-radius: 10px;
   color: white;
-  margin-top: 27px;
+  margin-top: clamp(18px, 2vw, 27px);
 }
 
 .betterCard h5 {
   color: #4dc0b3;
-  font-size: 35px;
-  margin-top: 25px;
+  font-size: clamp(28px, 3vw, 35px);
+  line-height: 1;
+  margin-top: clamp(18px, 2vw, 25px);
 }
 
 .betterCard .description {
-  font-size: 18px;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.35;
   margin-top: 9px;
-  max-width: 240px;
   color: #3d4342;
+}
+
+@media (max-width: 520px) {
+  .betterCard {
+    width: min(82vw, 320px);
+  }
 }

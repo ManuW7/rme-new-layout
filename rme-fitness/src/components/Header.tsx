@@ -1,6 +1,16 @@
+import type { MouseEvent } from "react";
 import "./Header.css";
 
-function Header() {
+interface HeaderProps {
+  onOpenAppModal: () => void;
+}
+
+function Header({ onOpenAppModal }: HeaderProps) {
+  const handleDownloadClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    onOpenAppModal();
+  };
+
   return (
     <header>
       <div className="headerContentWrapper">
@@ -22,19 +32,19 @@ function Header() {
         </svg>
         <ul>
           <li>
-            <a href="">О приложении</a>
+            <a href="#howThisWorks">О приложении</a>
           </li>
           <li>
-            <a href="">Преимущества</a>
+            <a href="#betterSection">Преимущества</a>
           </li>
           <li>
-            <a href="">Как это работает?</a>
+            <a href="#trainerSection">Как это работает?</a>
           </li>
           <li>
-            <a href="">Партнёрство</a>
+            <a href="#questionsLeft">Партнёрство</a>
           </li>
         </ul>
-        <a className="downloadButton" href="">
+        <a className="downloadButton" href="" onClick={handleDownloadClick}>
           <p>Скачать</p>
           <div className="logosDiv">
             <svg

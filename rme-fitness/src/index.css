@@ -4,8 +4,18 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+}
+
 main {
-  padding: 0 72px;
+  padding: 0 clamp(18px, 5vw, 72px);
   background-color: #f8f8f8;
 }
 
@@ -34,11 +44,18 @@ h6 {
 }
 
 h2 {
-  font-size: 55px;
+  font-size: clamp(36px, 5vw, 55px);
+  line-height: 1;
   color: #4dc0b3;
+  text-wrap: balance;
 }
 
 p {
   font-family: "Helvetica Neue";
   font-weight: 400;
+}
+
+img,
+svg {
+  max-width: 100%;
 }
