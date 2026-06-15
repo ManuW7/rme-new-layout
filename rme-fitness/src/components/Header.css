@@ -68,6 +68,43 @@ header a.downloadButton .logosDiv {
   gap: 6px;
 }
 
+.burgerButton {
+  display: none;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.burgerButton span {
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #3d4342;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.header--menu-open .burgerButton span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header--menu-open .burgerButton span:nth-child(2) {
+  opacity: 0;
+}
+
+.header--menu-open .burgerButton span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 980px) {
   header .headerContentWrapper {
     align-items: flex-start;
@@ -99,5 +136,52 @@ header a.downloadButton .logosDiv {
   header a.downloadButton {
     padding: 10px 16px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  header {
+    position: relative;
+    z-index: 20;
+  }
+
+  header .headerContentWrapper {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  header a.downloadButton {
+    display: none;
+  }
+
+  .burgerButton {
+    display: flex;
+    margin-left: auto;
+  }
+
+  header.header--menu-open ul {
+    order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 18px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  }
+
+  header.header--menu-open a.downloadButton {
+    order: 4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
   }
 }

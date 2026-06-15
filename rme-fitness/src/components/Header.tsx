@@ -1,4 +1,4 @@
-import type { MouseEvent } from "react";
+import { useState, type MouseEvent } from "react";
 import "./Header.css";
 
 interface HeaderProps {
@@ -6,13 +6,16 @@ interface HeaderProps {
 }
 
 function Header({ onOpenAppModal }: HeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleDownloadClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
+    setIsMenuOpen(false);
     onOpenAppModal();
   };
 
   return (
-    <header>
+    <header className={isMenuOpen ? "header--menu-open" : ""}>
       <div className="headerContentWrapper">
         <svg
           width="42"
@@ -30,7 +33,7 @@ function Header({ onOpenAppModal }: HeaderProps) {
             fill="#4DC0B3"
           />
         </svg>
-        <ul>
+        <ul onClick={() => setIsMenuOpen(false)}>
           <li>
             <a href="#howThisWorks">О приложении</a>
           </li>
@@ -164,6 +167,17 @@ function Header({ onOpenAppModal }: HeaderProps) {
             </svg>
           </div>
         </a>
+        <button
+          className="burgerButton"
+          type="button"
+          aria-label="Menu"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((currentValue) => !currentValue)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   );

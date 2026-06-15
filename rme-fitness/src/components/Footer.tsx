@@ -2,6 +2,7 @@ import "./Footer.css";
 
 import appStoreIcon from "../assets/appStore.svg";
 import googlePlayIcon from "../assets/googlePlay.svg";
+import monkeyPic from "../assets/monkey.png";
 import ruStoreIcon from "../assets/ruStore.svg";
 
 interface FooterProps {
@@ -58,7 +59,10 @@ function Footer({ onOpenAppModal }: FooterProps) {
           <p>Разработка сайта</p>
         </div>
 
-        <p className="footerBrand">RME FITNESS</p>
+        <div className="footerVisual">
+          <p className="footerBrand">RME FITNESS</p>
+          <img className="footerMobilePicture" src={monkeyPic} alt="" />
+        </div>
       </div>
     </footer>
   );

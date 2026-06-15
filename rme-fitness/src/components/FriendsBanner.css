@@ -52,6 +52,7 @@
 
 .friendsBanner .textContent button p {
   font-size: inherit;
+  display: inline-block;
 }
 
 .friendsBanner .textContent button:hover {
@@ -82,5 +83,17 @@
   .friendsBanner .textContent button {
     width: 100%;
     margin-top: 32px;
+  }
+}
+
+@media (max-width: 360px) {
+  .friendsBanner {
+    text-align: center;
+  }
+
+  .friendsBanner .textContent button {
+    background-color: #4dc0b3;
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }

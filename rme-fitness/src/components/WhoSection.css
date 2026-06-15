@@ -5,6 +5,15 @@
   margin-top: clamp(96px, 13vw, 169px);
 }
 
+.whoSection h2 {
+  text-align: center;
+}
+
+.whoMobileTitle,
+.whoMobileAnnotation {
+  display: none;
+}
+
 .whoSection .annotation {
   font-size: clamp(17px, 2vw, 22px);
   line-height: 1.35;
@@ -17,6 +26,7 @@
   display: flex;
   flex-direction: row;
   width: min(100%, 650px);
+  height: 252px;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
@@ -32,6 +42,7 @@
 
 .whoCard img {
   width: 42%;
+  height: 100%;
   min-width: 220px;
   object-fit: cover;
 }
@@ -57,6 +68,10 @@
   margin-bottom: 8px;
 }
 
+.whoTitleMobile {
+  display: none;
+}
+
 .whoCardContent .whoText {
   font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.35;
@@ -64,13 +79,69 @@
 }
 
 @media (max-width: 640px) {
+  .whoSection > h2:not(.whoMobileTitle),
+  .whoSection > .annotation:not(.whoMobileAnnotation) {
+    display: none;
+  }
+
+  .whoMobileTitle,
+  .whoMobileAnnotation {
+    display: block;
+    text-align: center;
+  }
+
   .whoCard {
     flex-direction: column;
+    height: auto;
   }
 
   .whoCard img {
     width: 100%;
     min-width: 0;
-    max-height: 260px;
+    height: 260px;
+    max-height: none;
+  }
+
+  .whoCardContent {
+    min-height: 230px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 640px) {
+  .whoCardContent {
+    min-height: 270px;
+  }
+}
+
+@media (max-width: 360px) {
+  .whoSection h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .whoCard img {
+    object-fit: cover;
+    border-radius: 20px;
+    height: 357px;
+    max-height: none;
+  }
+
+  .whoCardContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .whoCardContent .whoText {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .whoTitleDesktop {
+    display: none;
+  }
+
+  .whoTitleMobile {
+    display: inline;
   }
 }

@@ -70,8 +70,39 @@
   color: #3d4342;
 }
 
+.betterCardsIndicator {
+  display: none;
+}
+
 @media (max-width: 520px) {
+  .betterCardsContainer {
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 9vw;
+  }
+
   .betterCard {
     width: min(82vw, 320px);
+    scroll-snap-align: center;
+  }
+
+  .betterCardsIndicator {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 36px;
+  }
+
+  .betterCardsIndicatorDot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    cursor: pointer;
+  }
+
+  .betterCardsIndicatorDot--active {
+    background-color: #4dc0b3;
   }
 }

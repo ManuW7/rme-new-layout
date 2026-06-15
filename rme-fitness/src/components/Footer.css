@@ -91,6 +91,10 @@
   margin-left: clamp(-85px, -6vw, -22px);
 }
 
+.footerMobilePicture {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .footerColumns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -112,5 +116,117 @@
   .footerBottom p:nth-child(2),
   .footerBottom p:nth-child(3) {
     text-align: left;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding-top: 96px;
+  }
+
+  .footerContent {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 178px) minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 18px;
+    padding: 28px 10px 10px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .footerColumns {
+    display: contents;
+  }
+
+  .footerColumn h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .footerColumn a {
+    margin-bottom: 7px;
+    font-size: 11px;
+    line-height: 1.15;
+  }
+
+  .footerStores {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 8px;
+  }
+
+  .footerStores h4 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .footerStores button {
+    width: 100%;
+    min-height: 42px;
+    margin-bottom: 0;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .footerStores img {
+    width: 100%;
+    max-height: 22px;
+  }
+
+  .footerColumn:not(.footerStores) {
+    grid-column: 1;
+    width: 100%;
+  }
+
+  .footerBottom {
+    grid-column: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 0;
+  }
+
+  .footerBottom p,
+  .footerBottom p:nth-child(2),
+  .footerBottom p:nth-child(3) {
+    text-align: left;
+  }
+
+  .footerBottom p {
+    color: #c6cccb;
+    font-size: 8px;
+    line-height: 1.15;
+  }
+
+  .footerVisual {
+    grid-column: 2;
+    grid-row: 2 / span 5;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .footerBrand {
+    margin: 0;
+    color: #95dcd5;
+    font-size: 48px;
+    line-height: 0.82;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  .footerMobilePicture {
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+    object-fit: cover;
   }
 }

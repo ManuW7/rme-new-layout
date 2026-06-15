@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./BetterSection.css";
 
 import better1 from "../assets/better1.jpg";
@@ -9,12 +9,15 @@ import better5 from "../assets/better5.jpg";
 
 export default function BetterSection() {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const cardsCount = 5;
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       const container = containerRef.current;
 
       if (!container) return;
+      if (window.matchMedia("(max-width: 768px)").matches) return;
 
       const rect = container.getBoundingClientRect();
 
@@ -50,6 +53,52 @@ export default function BetterSection() {
       window.removeEventListener("wheel", handleWheel);
     };
   }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    if (!container) return;
+
+    const updateActiveCard = () => {
+      const cards = Array.from(container.children);
+      const containerCenter = container.scrollLeft + container.clientWidth / 2;
+
+      const nearestCardIndex = cards.reduce((nearestIndex, card, index) => {
+        const currentCard = card as HTMLElement;
+        const nearestCard = cards[nearestIndex] as HTMLElement;
+        const currentCardCenter = currentCard.offsetLeft + currentCard.offsetWidth / 2;
+        const nearestCardCenter = nearestCard.offsetLeft + nearestCard.offsetWidth / 2;
+
+        return Math.abs(currentCardCenter - containerCenter) <
+          Math.abs(nearestCardCenter - containerCenter)
+          ? index
+          : nearestIndex;
+      }, 0);
+
+      setActiveCardIndex(nearestCardIndex);
+    };
+
+    updateActiveCard();
+    container.addEventListener("scroll", updateActiveCard, { passive: true });
+    window.addEventListener("resize", updateActiveCard);
+
+    return () => {
+      container.removeEventListener("scroll", updateActiveCard);
+      window.removeEventListener("resize", updateActiveCard);
+    };
+  }, []);
+
+  const handleIndicatorClick = (index: number) => {
+    const container = containerRef.current;
+    const targetCard = container?.children[index] as HTMLElement | undefined;
+
+    if (!container || !targetCard) return;
+
+    container.scrollTo({
+      left: targetCard.offsetLeft - (container.clientWidth - targetCard.offsetWidth) / 2,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section className="betterSection" id="betterSection">
@@ -125,6 +174,21 @@ export default function BetterSection() {
             меньше он тебе не даст :)
           </p>
         </div>
+      </div>
+
+      <div className="betterCardsIndicator" aria-label="Current card">
+        {Array.from({ length: cardsCount }).map((_, index) => (
+          <button
+            className={`betterCardsIndicatorDot ${
+              activeCardIndex === index ? "betterCardsIndicatorDot--active" : ""
+            }`}
+            type="button"
+            aria-label={`${index + 1} / ${cardsCount}`}
+            aria-current={activeCardIndex === index}
+            key={index}
+            onClick={() => handleIndicatorClick(index)}
+          ></button>
+        ))}
       </div>
     </section>
   );

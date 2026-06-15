@@ -33,7 +33,7 @@
   color: #3d4342;
 }
 
-.questionsLeft .textContent button {
+.questionsLeft .textContent a {
   background-color: #4dc0b3;
   padding: 16px clamp(24px, 4vw, 31px);
   color: white;
@@ -47,11 +47,11 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.questionsLeft .textContent button p {
+.questionsLeft .textContent a p {
   font-size: inherit;
 }
 
-.questionsLeft .textContent button:hover {
+.questionsLeft .textContent a:hover {
   background-color: white;
   color: #4dc0b3;
   border: 3px solid #4dc0b3;
@@ -71,7 +71,24 @@
 }
 
 @media (max-width: 520px) {
-  .questionsLeft .textContent button {
+  .questionsLeft .textContent a {
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .questionsLeft {
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .questionsLeft .textContent {
+    padding: 30px 0;
+  }
+
+  .questionsLeft img {
+    width: 100%;
+    max-height: 206px;
+    border-radius: 20px;
   }
 }

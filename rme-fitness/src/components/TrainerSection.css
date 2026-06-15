@@ -74,6 +74,10 @@
   color: #3d4342;
 }
 
+.trainerTextMobile {
+  display: none;
+}
+
 .subscribeButton {
   font-size: clamp(15px, 1.8vw, 18px);
   background-color: #4dc0b3;
@@ -131,6 +135,35 @@
 
   .subscribeButton {
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .contentWrapper {
+    background-color: white;
+    padding: 18px;
+    border-radius: 17px;
+  }
+
+  .trainerSection .phonePicture {
+    max-width: 150px;
+    left: 10%;
+  }
+
+  .trainerSection .trainerPicture {
+    max-width: 120px;
+    top: 30px;
+    left: 40%;
+  }
+
+  .trainerTextDesktop {
+    display: none;
+  }
+
+  .trainerTextMobile {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
   }
 }
 

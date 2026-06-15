@@ -2,6 +2,7 @@ import "./HeroSection.css";
 import manHero from "../assets/manHero.png";
 import phoneHero from "../assets/phone_hero.png";
 import womanHero from "../assets/womanHero.png";
+import phoneTrainer from "../assets/bannerPhone.png";
 
 interface HeroSectionProps {
   onOpenAppModal: () => void;
@@ -12,7 +13,7 @@ function HeroSection({ onOpenAppModal }: HeroSectionProps) {
     <section className="heroSection">
       <div className="heroSectionContent">
         <h1>
-          <span>ПЕРСОНАЛЬНЫЙ ИИ-ТРЕНЕР</span> У ТЕБЯ В ТЕЛЕФОНЕ
+          <span>ПЕРСОНАЛЬНЫЙ ИИ-ТРЕНЕР</span> У&nbsp;ТЕБЯ В&nbsp;ТЕЛЕФОНЕ
         </h1>
         <p>
           Занимайся фитнесом и&nbsp;йогой из&nbsp;любой точки мира
@@ -26,6 +27,7 @@ function HeroSection({ onOpenAppModal }: HeroSectionProps) {
       <img className="manPicture" src={manHero} alt="" />
       <img className="phonePicture" src={phoneHero} alt="" />
       <img className="womanPicture" src={womanHero} alt="" />
+      <img className="phoneTrainer" src={phoneTrainer} alt="" />
     </section>
   );
 }

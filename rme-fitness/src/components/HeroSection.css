@@ -7,6 +7,10 @@
   background-color: white;
 }
 
+.phoneTrainer {
+  display: none;
+}
+
 .heroSectionContent {
   max-width: 415px;
 }
@@ -76,4 +80,62 @@
   max-width: 445px;
   top: 150px;
   left: 680px;
+}
+
+@media (max-width: 360px) {
+  .manPicture {
+    display: none;
+  }
+
+  .womanPicture {
+    display: none;
+  }
+
+  .heroSection h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 300px;
+  }
+
+  .heroSection .phonePicture {
+    max-width: 150px;
+    top: 25px;
+    left: 35px;
+  }
+
+  .heroSection {
+    padding: 0 16px;
+    max-width: 330px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    padding-bottom: 30px;
+  }
+
+  .greenCircleBackground {
+    top: -600px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .phoneTrainer {
+    display: flex;
+    position: absolute;
+    max-width: 130px;
+    top: 25px;
+    left: 150px;
+  }
+
+  .heroSection p {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .heroSection .tryButton {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+  }
 }

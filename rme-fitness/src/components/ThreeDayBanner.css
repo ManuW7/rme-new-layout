@@ -147,7 +147,6 @@
 
   .subscriptionBanner .backGym {
     left: 38%;
-    opacity: 0.72;
   }
 }
 
@@ -159,5 +158,44 @@
 
   .subscriptionBanner .phoneImage {
     width: 128px;
+  }
+}
+
+@media (max-width: 360px) {
+  .greenCircle {
+    width: 846px;
+    height: 846px;
+    z-index: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .subscriptionBanner .backGym {
+    left: 0;
+    max-width: 340px;
+    top: -20%;
+  }
+
+  .subscriptionBanner .phoneImage {
+    display: none;
+  }
+
+  .subscriptionBanner {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .bannerContent .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 22px;
+  }
+
+  .subscriptionBanner .buttonsDiv {
+    top: 50px;
+    left: 20%;
   }
 }

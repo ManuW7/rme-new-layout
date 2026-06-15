@@ -11,9 +11,9 @@ function QuestionsLeft() {
           Напишите нашему дружелюбному менеджеру: не&nbsp;бойтесь,
           он&nbsp;у&nbsp;нас не кусается. Он&nbsp;вообще славный малый
         </p>
-        <button>
+        <a href="https://t.me/RMe_channel?direct">
           <p>Написать!</p>
-        </button>
+        </a>
       </div>
     </section>
   );

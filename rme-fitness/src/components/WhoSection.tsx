@@ -7,6 +7,8 @@ import whoPic4 from "../assets/who4.png";
 function WhoSection() {
   return (
     <section className="whoSection" id="whoSection">
+      <h2 className="whoMobileTitle">КОМУ ПОДОЙДЁТ?</h2>
+      <p className="annotation whoMobileAnnotation">Найди себя или собери бинго</p>
       <h2>КОМУ ПОДОЙДЁТ ИИ-ТРЕНЕР?</h2>
       <p className="annotation">Найди себя или собери спортивное бинго</p>
 
@@ -45,7 +47,10 @@ function WhoSection() {
             <div className="countDiv">
               <p>3 / 4</p>
             </div>
-            <h5>ЛЮБИТЕЛЯМ СПОРТА И ПИЦЦЫ</h5>
+            <h5>
+              <span className="whoTitleDesktop">ЛЮБИТЕЛЯМ СПОРТА И ПИЦЦЫ</span>
+              <span className="whoTitleMobile">ЛЮБИТЕЛЯМ СПОРТА</span>
+            </h5>
             <p className="whoText">
               Всем, кто хочет быть в&nbsp;хорошей физической форме по&nbsp;любой
               из возможных причин
