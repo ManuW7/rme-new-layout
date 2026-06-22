@@ -1,0 +1,108 @@
+.documentPage {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  padding-top: clamp(56px, 8vw, 96px);
+  padding-bottom: clamp(96px, 12vw, 160px);
+}
+
+.documentHero {
+  width: 100%;
+  min-width: 0;
+  max-width: 980px;
+  margin: 0 auto 32px;
+}
+
+.documentBackLink {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 34px;
+  color: #4dc0b3;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.documentBackLink:hover {
+  color: #0c9586;
+}
+
+.documentEyebrow {
+  margin-bottom: 12px;
+  color: #4dc0b3;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.documentHero h1 {
+  overflow-wrap: anywhere;
+  max-width: 760px;
+  color: #3d4342;
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 0.95;
+}
+
+.documentUpdatedAt {
+  margin-top: 18px;
+  color: #8a908f;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.documentContent {
+  width: 100%;
+  min-width: 0;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 58px);
+  border-radius: 20px;
+  background-color: white;
+}
+
+.documentContent p {
+  color: #3d4342;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.documentText {
+  white-space: pre-wrap;
+}
+
+.documentContent p + p {
+  margin-top: 18px;
+}
+
+.documentContent a {
+  color: #0c9586;
+  text-decoration: none;
+}
+
+.documentContent a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .documentContent {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .documentPage {
+    padding-top: 44px;
+  }
+
+  .documentBackLink {
+    margin-bottom: 28px;
+  }
+
+  .documentHero h1 {
+    font-size: 42px;
+  }
+
+  .documentContent {
+    padding: 24px 18px;
+  }
+}

@@ -35,16 +35,16 @@ function Header({ onOpenAppModal }: HeaderProps) {
         </svg>
         <ul onClick={() => setIsMenuOpen(false)}>
           <li>
-            <a href="#howThisWorks">О приложении</a>
+            <a href="/#howThisWorks">О приложении</a>
           </li>
           <li>
-            <a href="#betterSection">Преимущества</a>
+            <a href="/#betterSection">Преимущества</a>
           </li>
           <li>
-            <a href="#trainerSection">Как это работает?</a>
+            <a href="/#trainerSection">Как это работает?</a>
           </li>
           <li>
-            <a href="#questionsLeft">Партнёрство</a>
+            <a href="/#questionsLeft">Партнёрство</a>
           </li>
         </ul>
         <a className="downloadButton" href="" onClick={handleDownloadClick}>
