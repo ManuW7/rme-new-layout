@@ -174,10 +174,14 @@
   }
 
   .subscriptionBanner .backGym {
-    right: auto;
     left: 0;
-    max-width: 340px;
-    top: -20%;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 420px;
+    max-width: none;
+    max-height: none;
+    object-position: top center;
   }
 
   .subscriptionBanner .phoneImage {
