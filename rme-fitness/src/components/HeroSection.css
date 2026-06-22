@@ -7,6 +7,10 @@
   background-color: white;
 }
 
+.heroSectionInner {
+  display: contents;
+}
+
 .phoneTrainer {
   display: none;
 }
@@ -137,5 +141,21 @@
     margin-right: auto;
     display: block;
     margin-top: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .heroSection {
+    padding: 0;
+  }
+
+  .heroSectionInner {
+    position: relative;
+    display: block;
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding-left: 72px;
+    padding-top: 113px;
+    padding-bottom: 113px;
   }
 }

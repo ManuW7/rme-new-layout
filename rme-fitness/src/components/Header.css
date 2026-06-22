@@ -185,3 +185,10 @@ header a.downloadButton .logosDiv {
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
   }
 }
+
+@media (min-width: 1600px) {
+  header .headerContentWrapper {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+  }
+}

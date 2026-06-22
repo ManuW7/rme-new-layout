@@ -11,23 +11,25 @@ interface HeroSectionProps {
 function HeroSection({ onOpenAppModal }: HeroSectionProps) {
   return (
     <section className="heroSection">
-      <div className="heroSectionContent">
-        <h1>
-          <span>ПЕРСОНАЛЬНЫЙ ИИ-ТРЕНЕР</span> У&nbsp;ТЕБЯ В&nbsp;ТЕЛЕФОНЕ
-        </h1>
-        <p>
-          Занимайся фитнесом и&nbsp;йогой из&nbsp;любой точки мира
-          и&nbsp;в&nbsp;любое время
-        </p>
-        <button className="tryButton" type="button" onClick={onOpenAppModal}>
-          Попробовать бесплатно
-        </button>
+      <div className="heroSectionInner">
+        <div className="heroSectionContent">
+          <h1>
+            <span>ПЕРСОНАЛЬНЫЙ ИИ-ТРЕНЕР</span> У&nbsp;ТЕБЯ В&nbsp;ТЕЛЕФОНЕ
+          </h1>
+          <p>
+            Занимайся фитнесом и&nbsp;йогой из&nbsp;любой точки мира
+            и&nbsp;в&nbsp;любое время
+          </p>
+          <button className="tryButton" type="button" onClick={onOpenAppModal}>
+            Попробовать бесплатно
+          </button>
+        </div>
+        <div className="greenCircleBackground"></div>
+        <img className="manPicture" src={manHero} alt="" />
+        <img className="phonePicture" src={phoneHero} alt="" />
+        <img className="womanPicture" src={womanHero} alt="" />
+        <img className="phoneTrainer" src={phoneTrainer} alt="" />
       </div>
-      <div className="greenCircleBackground"></div>
-      <img className="manPicture" src={manHero} alt="" />
-      <img className="phonePicture" src={phoneHero} alt="" />
-      <img className="womanPicture" src={womanHero} alt="" />
-      <img className="phoneTrainer" src={phoneTrainer} alt="" />
     </section>
   );
 }

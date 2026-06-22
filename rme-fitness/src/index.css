@@ -65,3 +65,10 @@ svg {
     padding: 0 35px;
   }
 }
+
+@media (min-width: 1600px) {
+  main {
+    width: min(100%, 1584px);
+    margin: 0 auto;
+  }
+}

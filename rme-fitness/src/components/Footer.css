@@ -230,3 +230,17 @@
     object-fit: cover;
   }
 }
+
+@media (min-width: 1600px) {
+  .footerContent {
+    width: min(100%, 1584px);
+    margin: 0 auto;
+  }
+
+  .footerBrand {
+    width: calc(100% + 144px);
+    margin-left: -72px;
+    font-size: clamp(192px, 15vw, 238px);
+    text-align: center;
+  }
+}
