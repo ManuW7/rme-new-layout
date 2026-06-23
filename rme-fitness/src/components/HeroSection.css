@@ -22,6 +22,7 @@
 .heroSection h1 {
   font-size: 75px;
   color: #3d4342;
+  overflow-wrap: break-word;
 }
 
 .heroSection h1 span {
@@ -84,6 +85,123 @@
   max-width: 445px;
   top: 200px;
   left: 680px;
+}
+
+@media (min-width: 361px) and (max-width: 760px) {
+  .heroSection {
+    width: min(100%, 560px);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 clamp(18px, 5vw, 34px) 40px;
+    border-radius: 20px;
+  }
+
+  .heroSectionContent {
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .heroSection h1 {
+    margin-top: clamp(360px, 76vw, 450px);
+    font-size: clamp(50px, 12vw, 68px);
+    line-height: 0.95;
+    text-align: center;
+  }
+
+  .heroSection p {
+    max-width: 440px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(16px, 4vw, 20px);
+    text-align: center;
+  }
+
+  .heroSection .tryButton {
+    display: block;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .greenCircleBackground {
+    top: clamp(-620px, -118vw, -500px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .heroSection .manPicture,
+  .heroSection .womanPicture {
+    display: none;
+  }
+
+  .heroSection .phonePicture {
+    width: clamp(150px, 38vw, 210px);
+    max-width: none;
+    top: 25px;
+    left: calc(50% - clamp(150px, 38vw, 210px));
+    z-index: 1;
+  }
+
+  .phoneTrainer {
+    display: flex;
+    position: absolute;
+    width: clamp(130px, 34vw, 190px);
+    max-width: none;
+    top: 25px;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .heroSection {
+    min-height: 580px;
+    padding-left: clamp(36px, 6vw, 72px);
+    padding-top: clamp(72px, 9vw, 113px);
+    padding-bottom: clamp(72px, 9vw, 113px);
+  }
+
+  .heroSectionContent {
+    max-width: min(44vw, 415px);
+  }
+
+  .heroSection h1 {
+    font-size: clamp(54px, 6.4vw, 75px);
+    line-height: 0.95;
+  }
+
+  .heroSection p {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+
+  .greenCircleBackground {
+    width: clamp(620px, 72vw, 846px);
+    height: clamp(620px, 72vw, 846px);
+    left: 48%;
+  }
+
+  .heroSection .manPicture {
+    width: clamp(360px, 48vw, 575px);
+    max-width: none;
+    left: 66%;
+    transform: translateX(-18%);
+  }
+
+  .heroSection .phonePicture {
+    width: clamp(210px, 28vw, 350px);
+    max-width: none;
+    top: clamp(150px, 17vw, 175px);
+    left: 45%;
+  }
+
+  .heroSection .womanPicture {
+    width: clamp(285px, 38vw, 445px);
+    max-width: none;
+    top: 200px;
+    left: 58%;
+  }
 }
 
 @media (max-width: 360px) {

@@ -80,6 +80,7 @@
 }
 
 .footerBrand {
+  width: calc(100% + clamp(36px, 10vw, 144px));
   margin-top: 16px;
   margin-bottom: -35px;
   color: #caece8;
@@ -88,7 +89,8 @@
   font-weight: 700;
   line-height: 0.8;
   white-space: nowrap;
-  margin-left: clamp(-85px, -6vw, -22px);
+  margin-left: clamp(-72px, -5vw, -18px);
+  text-align: center;
 }
 
 .footerMobilePicture {
@@ -213,6 +215,7 @@
   }
 
   .footerBrand {
+    width: auto;
     margin: 0;
     color: #95dcd5;
     font-size: 48px;
@@ -238,9 +241,6 @@
   }
 
   .footerBrand {
-    width: calc(100% + 144px);
-    margin-left: -72px;
     font-size: clamp(192px, 15vw, 238px);
-    text-align: center;
   }
 }
