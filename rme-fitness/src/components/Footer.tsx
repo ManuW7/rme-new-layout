@@ -1,3 +1,4 @@
+import type { MouseEvent } from "react";
 import "./Footer.css";
 
 import appStoreIcon from "../assets/appStore.svg";
@@ -7,9 +8,15 @@ import ruStoreIcon from "../assets/ruStore.svg";
 
 interface FooterProps {
   onOpenAppModal: () => void;
+  onOpenCooperationModal: () => void;
 }
 
-function Footer({ onOpenAppModal }: FooterProps) {
+function Footer({ onOpenAppModal, onOpenCooperationModal }: FooterProps) {
+  const handleCooperationClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    onOpenCooperationModal();
+  };
+
   return (
     <footer className="footer">
       <div className="footerContent">
@@ -65,7 +72,7 @@ function Footer({ onOpenAppModal }: FooterProps) {
             <a href="/personal-data-policy">
               Политика обработки персональных данных
             </a>
-            <a href="https://forms.yandex.ru/u/693b249bf47e73185bc4f0e2">
+            <a href="#cooperation" onClick={handleCooperationClick}>
               Партнерство
             </a>
           </nav>

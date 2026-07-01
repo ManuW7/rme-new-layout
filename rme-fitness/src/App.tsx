@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import AppModal from "./components/AppModal";
 import BetterSection from "./components/BetterSection";
+import CooperationModal from "./components/CooperationModal";
 import DocumentPage from "./components/DocumentPage";
 import { documents, type DocumentPath } from "./components/documentPages";
 import FAQSection from "./components/FAQSection";
@@ -17,15 +18,21 @@ import WhoSection from "./components/WhoSection";
 
 function App() {
   const [isAppModalOpen, setIsAppModalOpen] = useState(false);
+  const [isCooperationModalOpen, setIsCooperationModalOpen] = useState(false);
   const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
   const isDocumentPath = currentPath in documents;
 
   const openAppModal = () => setIsAppModalOpen(true);
   const closeAppModal = () => setIsAppModalOpen(false);
+  const openCooperationModal = () => setIsCooperationModalOpen(true);
+  const closeCooperationModal = () => setIsCooperationModalOpen(false);
 
   return (
     <>
-      <Header onOpenAppModal={openAppModal}></Header>
+      <Header
+        onOpenAppModal={openAppModal}
+        onOpenCooperationModal={openCooperationModal}
+      ></Header>
       {isDocumentPath ? (
         <DocumentPage path={currentPath as DocumentPath}></DocumentPage>
       ) : (
@@ -43,9 +50,15 @@ function App() {
           </main>
         </>
       )}
-      <Footer onOpenAppModal={openAppModal}></Footer>
+      <Footer
+        onOpenAppModal={openAppModal}
+        onOpenCooperationModal={openCooperationModal}
+      ></Footer>
 
       {isAppModalOpen && <AppModal onClose={closeAppModal}></AppModal>}
+      {isCooperationModalOpen && (
+        <CooperationModal onClose={closeCooperationModal}></CooperationModal>
+      )}
     </>
   );
 }

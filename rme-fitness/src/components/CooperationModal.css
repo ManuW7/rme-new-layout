@@ -1,0 +1,174 @@
+.cooperationModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.82);
+}
+
+.cooperationModal {
+  position: relative;
+  width: min(1135px, calc(100vw - 80px));
+  height: min(747px, calc(100dvh - 80px));
+  display: flex;
+  flex-direction: column;
+  padding: 18px 12px 13px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.cooperationModalClose {
+  position: absolute;
+  top: 0;
+  right: -72px;
+  width: 72px;
+  height: 72px;
+  border: none;
+  border-radius: 14px;
+  background-color: #f8f8f8;
+  color: #3d4342;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.cooperationModalClose:hover {
+  background-color: #4dc0b3;
+  color: white;
+}
+
+.cooperationModal h2 {
+  flex: 0 0 auto;
+  color: #4dc0b3;
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 0.9;
+  text-align: center;
+}
+
+.cooperationModalOptions {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.cooperationModalOption {
+  width: 100%;
+  max-width: min(calc((100% - 24px) / 2), calc(100dvh - 268px));
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.cooperationModalOption img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+  background:
+    linear-gradient(135deg, rgba(77, 192, 179, 0.2), rgba(61, 67, 66, 0.1)),
+    #f2f2f2;
+}
+
+.cooperationModalOption a {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #4dc0b3;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cooperationModalOption a:hover {
+  background-color: white;
+  color: #4dc0b3;
+  box-shadow: inset 0 0 0 3px #4dc0b3;
+}
+
+@media (max-width: 760px) {
+  .cooperationModalOverlay {
+    padding: 12px 0;
+  }
+
+  .cooperationModal {
+    width: min(330px, calc(100vw - 28px));
+    height: min(766px, calc(100dvh - 24px));
+    padding: 8px 9px 12px;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .cooperationModalClose {
+    top: 8px;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    background-color: white;
+    font-size: 24px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  .cooperationModal h2 {
+    margin-right: 54px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .cooperationModal h2::before {
+    content: "КТО ВЫ?";
+    display: block;
+    color: #4dc0b3;
+    font-size: 34px;
+    line-height: 0.9;
+    text-align: left;
+  }
+
+  .cooperationModalOptions {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+    margin-top: 8px;
+  }
+
+  .cooperationModalOption {
+    width: min(100%, calc((100dvh - 195px) / 2));
+    max-width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .cooperationModalOption img {
+    min-height: 0;
+    height: auto;
+  }
+
+  .cooperationModalOption a {
+    min-height: 38px;
+    border-radius: 6px;
+    font-size: 10px;
+  }
+}

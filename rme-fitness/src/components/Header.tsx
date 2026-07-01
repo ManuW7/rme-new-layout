@@ -3,15 +3,22 @@ import "./Header.css";
 
 interface HeaderProps {
   onOpenAppModal: () => void;
+  onOpenCooperationModal: () => void;
 }
 
-function Header({ onOpenAppModal }: HeaderProps) {
+function Header({ onOpenAppModal, onOpenCooperationModal }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleDownloadClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     setIsMenuOpen(false);
     onOpenAppModal();
+  };
+
+  const handleCooperationClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setIsMenuOpen(false);
+    onOpenCooperationModal();
   };
 
   return (
@@ -44,7 +51,9 @@ function Header({ onOpenAppModal }: HeaderProps) {
             <a href="/#trainerSection">Как это работает?</a>
           </li>
           <li>
-            <a href="/#questionsLeft">Партнёрство</a>
+            <a href="#cooperation" onClick={handleCooperationClick}>
+              Партнёрство
+            </a>
           </li>
         </ul>
         <a className="downloadButton" href="" onClick={handleDownloadClick}>
